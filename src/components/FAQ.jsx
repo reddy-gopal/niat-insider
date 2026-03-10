@@ -160,7 +160,7 @@ export function FAQ({ faqRef }) {
           type: 'received',
           sender: 'Senior',
           time: 'just now',
-          text: "That's a great question! 🙌 Book a 1-on-1 session with a Senior and get everything answered personally.",
+          text: "That's a great question! 🙌 Join a one-to-many session with seniors and get your questions answered in the group.",
           isNew: true,
           showCTA: true,
         }];
