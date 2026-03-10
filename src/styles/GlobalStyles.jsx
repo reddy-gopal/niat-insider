@@ -205,7 +205,7 @@ export function GlobalStyles() {
       }
 
       /* ── Layout helpers ──────────────────────────────────────────────── */
-      .section-padding { padding: 100px 5%; position: relative; }
+      .section-padding { padding: clamp(40px, 6vw, 60px) 5%; position: relative; }
 
       .blob-bg {
         position: absolute;
@@ -225,11 +225,11 @@ export function GlobalStyles() {
       .hide-scrollbar { scrollbar-width: none; }
 
       .gradient-divider {
-        height: 100px;
+        height: clamp(30px, 4vw, 50px);
         background: linear-gradient(to bottom, var(--bg-1) 0%, var(--bg-2) 100%);
       }
       .gradient-divider-alt {
-        height: 100px;
+        height: clamp(30px, 4vw, 50px);
         background: linear-gradient(to bottom, var(--bg-2) 0%, var(--bg-1) 100%);
       }
 

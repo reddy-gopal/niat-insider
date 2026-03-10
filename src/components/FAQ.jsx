@@ -16,49 +16,30 @@ const initialMessages = [
     text: "🙋 Hi Senior! What's the single most important thing to focus on in the final year of college?",
   },
   {
-    id: 2, type: 'received',
-    sender: 'Senior', time: '10:04 AM',
-    text: "Great question! 🎯 Focus on <strong>building real projects</strong> and your <strong>network</strong>. Grades matter, but what you've built and who you know will open more doors than a GPA alone. Start one meaningful project today.",
+    id: 2, type: 'sent',
+    time: '10:04 AM', status: 'read',
+    text: 'How do I get my first internship with zero experience? 😅',
   },
   {
     id: 3, type: 'sent',
     time: '10:07 AM', status: 'read',
-    text: 'How do I get my first internship with zero experience? 😅',
+    text: 'Should I go for higher studies or start working right after graduation?',
   },
   {
-    id: 4, type: 'received',
-    sender: 'Senior', time: '10:09 AM',
-    text: "Everyone starts at zero! 🚀 Here's the hack:<br/><br/>1. Build a tiny portfolio (even 2–3 projects on GitHub)<br/>2. Cold email 20 startups directly — skip the big portals<br/>3. Offer to work for free for 2 weeks to prove yourself<br/><br/>You'll land something. I promise. 💪",
+    id: 4, type: 'sent',
+    time: '10:09 AM', status: 'read',
+    text: 'What soft skills actually matter in the real world? 🤔',
   },
   {
     id: 5, type: 'sent',
     time: '10:12 AM', status: 'read',
-    text: 'Should I go for higher studies or start working right after graduation?',
-  },
-  {
-    id: 6, type: 'received',
-    sender: 'Senior', time: '10:14 AM',
-    text: "There's no universal answer — but here's my filter:<br/>- If you want <strong>research, academia, or highly technical roles</strong> → higher studies first 🎓<br/>- If you want <strong>entrepreneurship or industry</strong> → work first, study later if needed<br/><br/>Don't do a Masters just to delay deciding. Work for 2 years, THEN decide with real-world clarity. 🧠",
-  },
-  {
-    id: 7, type: 'sent',
-    time: '10:18 AM', status: 'read',
-    text: 'What soft skills actually matter in the real world? 🤔',
-  },
-  {
-    id: 8, type: 'received',
-    sender: 'Senior', time: '10:20 AM',
-    text: "The Big 3 that nobody teaches you:<br/>✅ <strong>Communication</strong> — writing clear emails, speaking in meetings<br/>✅ <strong>Ownership</strong> — doing things without being asked twice<br/>✅ <strong>Adaptability</strong> — embracing change without panicking<br/><br/>Everything else is secondary. Master these and you'll outshine 90% of your peers. 🌟",
-  },
-  {
-    id: 9, type: 'sent',
-    time: '10:25 AM', status: 'read',
     text: 'Any advice on handling failure and rejection? It hits hard 😔',
   },
   {
-    id: 10, type: 'received',
-    sender: 'Senior', time: '10:27 AM',
-    text: "I was rejected from 34 companies before my first offer. Thirty. Four. 😅<br/><br/>Here's what I learned: <strong>rejection is data, not verdict</strong>. Every no tells you something — your CV, your pitch, your timing, your fit. Fix the signal, not your self-worth.<br/><br/>You're not behind. You're loading. 🔥",
+    id: 6, type: 'received',
+    sender: 'Senior', time: 'just now',
+    text: "These are all great questions! 🙌 I will answer all these questions in a session. You can book your slot right now from below and we can discuss everything in detail. 👇",
+    showCTA: true,
   },
 ];
 
@@ -97,10 +78,10 @@ export function FAQ({ faqRef }) {
   const [isMobile, setIsMobile] = useState(
     typeof window !== 'undefined' ? window.innerWidth < 768 : false
   );
-  const [messages, setMessages] = useState(initialMessages);
+  const [messages, setMessages] = useState(initialMessages.slice(0, 5));
   const [inputValue, setInputValue] = useState('');
   const [isFocused, setIsFocused] = useState(false);
-  const [isTyping, setIsTyping] = useState(false);
+  const [isTyping, setIsTyping] = useState(true);
 
   useEffect(() => {
     const onResize = () => setIsMobile(window.innerWidth < 768);
@@ -123,6 +104,38 @@ export function FAQ({ faqRef }) {
       chatRef.current.scrollTo({ top: chatRef.current.scrollHeight, behavior: 'smooth' });
     }
   }, [messages]);
+
+  // Display initial typing indicator and then senior message
+  useEffect(() => {
+    let isMounted = true;
+    const typingMsg = {
+      id: 'typing-indicator-initial',
+      type: 'received',
+      isTypingBubble: true,
+      sender: 'Senior'
+    };
+
+    setMessages(prev => {
+      // Prevent duplicate bubbles in React 18 StrictMode
+      if (prev.some(m => m.id === 'typing-indicator-initial' || m.id === 6)) return prev;
+      return [...prev, typingMsg];
+    });
+
+    const timer = setTimeout(() => {
+      if (!isMounted) return;
+      setMessages(prev => {
+        const filtered = prev.filter(m => m.id !== 'typing-indicator-initial');
+        if (filtered.some(m => m.id === 6)) return filtered; // Already added
+        return [...filtered, initialMessages[5]];
+      });
+      setIsTyping(false);
+    }, 3000); // Wait for exactly 3 seconds
+
+    return () => {
+      isMounted = false;
+      clearTimeout(timer);
+    };
+  }, []);
 
   // ── Submit: visitor types → RIGHT green, then Senior replies LEFT white ──
   const handleSubmit = () => {
@@ -312,7 +325,7 @@ export function FAQ({ faqRef }) {
         display: 'flex', flexDirection: isMobile ? 'column' : 'row',
         alignItems: 'center', justifyContent: 'center',
         fontFamily: "'Roboto', sans-serif",
-        padding: isMobile ? 0 : '80px 5%',
+        padding: isMobile ? 0 : 'clamp(40px, 6vw, 60px) 5%',
         marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)',
         zIndex: 10, gap: isMobile ? 0 : 60,
       }}
@@ -348,7 +361,7 @@ export function FAQ({ faqRef }) {
           </h2>
           <p style={{ color: 'rgba(255,255,255,0.68)', fontSize: 17, lineHeight: 1.65, fontFamily: "'DM Sans', sans-serif" }}>
             Ask anything. Get real answers directly from seniors who have been in your shoes.
-            No mentors, no counselors — just raw, unfiltered advice.
+            No mentors, no counselors, just raw, unfiltered advice.
           </p>
         </div>
       )}

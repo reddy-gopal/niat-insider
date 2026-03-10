@@ -27,7 +27,7 @@ export function CTA() {
         viewport={{ once: true, margin: "-100px" }}
         style={{
           maxWidth: '960px', margin: '0 auto', textAlign: 'center', position: 'relative', zIndex: 1,
-          padding: '80px 40px', borderRadius: '48px', background: 'rgba(255,255,255,0.03)',
+          padding: 'clamp(40px, 6vw, 60px) 40px', borderRadius: '48px', background: 'rgba(255,255,255,0.03)',
           border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 40px 80px -20px rgba(0,0,0,0.8), inset 0 0 0 1px rgba(255,255,255,0.05)',
           backdropFilter: 'blur(40px)', WebkitBackdropFilter: 'blur(40px)'
         }}

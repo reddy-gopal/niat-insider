@@ -5,9 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 const videos = [
-   { id: "-xyBuOufsuU", title: "NIAT Experience 2", subtitle: "Student Stories" },
-    { id: "4iMrTAm7a7g", title: "NIAT Experience 3", subtitle: "Daily Moments" },
-    { id: "q9w44EDpDzc", title: "NIAT Experience 1", subtitle: "Campus Life" }
+  { id: "-xyBuOufsuU", title: "NIAT Experience 2", subtitle: "Student Stories" },
+  { id: "4iMrTAm7a7g", title: "NIAT Experience 3", subtitle: "Daily Moments" },
+  { id: "q9w44EDpDzc", title: "NIAT Experience 1", subtitle: "Campus Life" }
 ];
 
 const container = {
@@ -146,7 +146,7 @@ export function DiscoverLife() {
         style={{ maxWidth: '1000px', margin: '0 auto', position: 'relative', zIndex: 1 }}
       >
         {/* Header */}
-        <motion.div variants={itemVariants} style={{ textAlign: 'center', marginBottom: '50px' }}>
+        <motion.div variants={itemVariants} style={{ textAlign: 'center', marginBottom: 'clamp(30px, 4vw, 40px)' }}>
           <span className="section-label" style={{ background: 'rgba(231, 15, 15, 0.1)', color: 'var(--accent-3)' }}>Life at NIAT</span>
           <h2 style={{ marginBottom: '16px', fontSize: 'clamp(32px, 5vw, 48px)', letterSpacing: '-0.03em' }}>
             See it before you live it.

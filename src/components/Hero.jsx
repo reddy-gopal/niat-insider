@@ -187,7 +187,7 @@ export function Hero() {
             color: 'var(--text-2)'
           }}
         >
-          One-to-many sessions with seniors. No mentors, no counsellors —
+          One-to-many sessions with seniors. No mentors, no counsellors,
           one or two seniors protect you from the noise. Book your slot and clear all your doubts.
         </motion.p>
 

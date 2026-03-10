@@ -26,7 +26,7 @@ export function MeetSeniors() {
         viewport={{ once: true, margin: "-100px" }}
         style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 1 }}
       >
-        <motion.div variants={item} style={{ textAlign: 'center', marginBottom: '70px' }}>
+        <motion.div variants={item} style={{ textAlign: 'center', marginBottom: 'clamp(40px, 5vw, 60px)' }}>
           <span className="section-label" style={{ background: 'rgba(118, 120, 237, 0.1)', color: 'var(--secondary)' }}>Meet Your Seniors</span>
           <h2 style={{ maxWidth: '800px', margin: '0 auto', fontSize: 'clamp(32px, 4vw, 44px)', lineHeight: 1.15 }}>
             Real students. Real stories.<br />
@@ -100,7 +100,7 @@ export function MeetSeniors() {
           ))}
         </div>
 
-        <motion.div variants={item} style={{ textAlign: 'center', marginTop: '80px' }}>
+        <motion.div variants={item} style={{ textAlign: 'center', marginTop: 'clamp(40px, 6vw, 60px)' }}>
           <p style={{ color: 'var(--text-2)', fontSize: 'clamp(16px, 2vw, 18px)', marginBottom: '24px', maxWidth: '420px', margin: '0 auto 24px auto' }}>
             Ready when you are. Reserve a spot for the next session.
           </p>
