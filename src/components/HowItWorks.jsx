@@ -12,6 +12,7 @@ const item = {
 };
 
 export function HowItWorks() {
+
   const bullets = [
     {
       icon: <Target color="#f35b04" size={24} />,
@@ -55,7 +56,7 @@ export function HowItWorks() {
             style={{
               aspectRatio: '16/8',
               borderRadius: '32px',
-              background: 'url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80") center/cover',
+              background: '#000',
               position: 'relative',
               overflow: 'hidden',
               display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', flexDirection: 'column',
@@ -64,27 +65,13 @@ export function HowItWorks() {
               transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)'
             }}
           >
-            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(153, 27, 27, 0.5))', mixBlendMode: 'multiply' }} />
-
-            <div style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-              <motion.div
-                whileHover={{ scale: 1.1, backgroundColor: 'rgba(255,255,255,0.3)' }}
-                whileTap={{ scale: 0.9 }}
-                style={{
-                  width: '88px', height: '88px', borderRadius: '50%',
-                  background: 'rgba(255,255,255,0.15)',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  cursor: 'pointer', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)',
-                  border: '1px solid rgba(255,255,255,0.3)',
-                  boxShadow: '0 10px 30px rgba(0,0,0,0.2)'
-                }}
-              >
-                <Play fill="white" size={36} style={{ marginLeft: '6px' }} />
-              </motion.div>
-              <h3 className="playfair" style={{ marginTop: '32px', fontSize: 'clamp(20px, 3vw, 28px)', fontWeight: 700, letterSpacing: '0.5px', textAlign: 'center' }}>
-                Watch: What happens in an AMA session?
-              </h3>
-            </div>
+            <iframe
+              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
+              src="https://www.youtube.com/embed/ONe4bhW0ISs?rel=0&modestbranding=1&autoplay=1&mute=1"
+              title="What happens in an AMA session?"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
           </motion.div>
         </motion.div>
 
@@ -107,7 +94,7 @@ export function HowItWorks() {
             style={{
               position: 'relative',
               width: '100%',
-              aspectRatio: '4/3',
+              aspectRatio: '1/1',
               borderRadius: '32px',
               overflow: 'hidden',
               boxShadow: '0 25px 50px -12px rgba(0,0,0,0.15)',
@@ -115,9 +102,9 @@ export function HowItWorks() {
             }}
           >
             <img
-              src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-              alt="AMA Sessions Explanation"
-              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              src="/ama_indian_students.png"
+              alt="AMA Sessions Explanation - Indian Students Discussing"
+              style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }}
             />
             {/* Soft inner shadow/border overlay */}
             <div style={{ position: 'absolute', inset: 0, border: '1px solid rgba(0,0,0,0.08)', borderRadius: '32px', pointerEvents: 'none', background: 'linear-gradient(to top, rgba(0,0,0,0.1) 0%, transparent 50%)' }} />
