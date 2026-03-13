@@ -19,11 +19,21 @@ export function Navbar({ scrolled }) {
           transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
-        .nav-brand-text {
+        .nav-brand-niat {
           font-weight: 700;
-          color: var(--text-1);
+          color: #991b1b;
           font-size: 20px;
           letter-spacing: -0.02em;
+        }
+        .nav-brand-insider {
+          font-weight: 500;
+          color: var(--text-1);
+          font-size: 18px;
+        }
+        .nav-brand-wrap {
+          display: inline-flex;
+          align-items: baseline;
+          gap: 4px;
         }
         
         .nav-btn {
@@ -32,9 +42,8 @@ export function Navbar({ scrolled }) {
         }
 
         @media (max-width: 768px) {
-          .nav-brand-text {
-            font-size: 18px;
-          }
+          .nav-brand-niat { font-size: 18px; }
+          .nav-brand-insider { font-size: 16px; }
           .nav-btn {
             padding: 8px 20px;
             font-size: 14px;
@@ -45,7 +54,7 @@ export function Navbar({ scrolled }) {
           .nav-container {
             padding: 0 20px !important;
           }
-          .nav-brand-text {
+          .nav-brand-insider {
             display: none;
           }
           .nav-btn {
@@ -68,9 +77,10 @@ export function Navbar({ scrolled }) {
         }}
       >
         <a href="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
-          <img src="/niat.png" alt="NIAT" style={{ height: '40px', width: 'auto', display: 'block' }} />
-          <span className="playfair nav-brand-text">
-            Ask Me Anything
+          <img src="https://niat-ama.vercel.app/niat.png" alt="NIAT" style={{ height: '40px', width: 'auto', display: 'block' }} />
+          <span className="nav-brand-wrap">
+            <span className="nav-brand-niat">NIAT</span>
+            <span className="nav-brand-insider">Insider</span>
           </span>
         </a>
         <motion.a
