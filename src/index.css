@@ -104,17 +104,21 @@
   box-sizing: border-box;
 }
 
+/* ─── Base font: Inter (primary for entire application) ─────────────────── */
+* {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 /* ─── Base ───────────────────────────────────────────────────────────────── */
 body {
-  font-family: 'DM Sans', sans-serif;
   font-size: var(--fs-body);
   font-weight: 400;
   color: var(--text-1);
   background-color: var(--bg-1);
   line-height: var(--lh-body);
   overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Headings — Fraunces optical serif */
