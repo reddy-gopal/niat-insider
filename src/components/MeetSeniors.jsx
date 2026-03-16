@@ -442,7 +442,7 @@ function SpotlightModal({ senior, onClose }) {
               }}
             >
               <Zap size={18} />
-              Book a Session with {senior.name.split(' ')[0]}
+              Book a Session
             </motion.a>
 
           </div>
