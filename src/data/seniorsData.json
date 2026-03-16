@@ -1,0 +1,89 @@
+[
+  {
+    "name": "Jamena Sutrave Hemanth Rao",
+    "profilePicture": "https://res.cloudinary.com/ds3egsoa3/image/upload/v1773641646/linkdin_pic_-_HEMANTH_RAO_kr6tl7.png",
+    "year": "NIAT Senior",
+    "expertise": [
+      "Tech",
+      "Campus Life",
+      "Leadership"
+    ],
+    "traits": [
+      "Smart (Delulu)",
+      "Open-minded"
+    ],
+    "quote": "You can talk about anything with me!",
+    "linkedIn": "https://www.linkedin.com/in/j-s-hemanth-rao/",
+    "about": "I am J. S. Hemanth Rao, a Computer Science student at NIAT with a strong interest in web development and emerging technologies. My core skills include HTML, CSS, Python, C++, and PHP, and I enjoy building innovative web applications and exploring new tools in the tech ecosystem.  I am passionate about solving real-world problems through technology and continuously improving my development skills. I actively work on projects related to web development, AI integration, and modern digital solutions, while also sharing insights on topics such as Generative AI and digital transformation.  My goal is to grow as a software developer by gaining hands-on experience, contributing to impactful projects, and learning advanced technologies that shape the future of software development.",
+    "accent": "var(--secondary)",
+    "bgGradient": "#9496f0, #7678ed"
+  },
+  {
+    "name": "Akhila Sirumalle",
+    "profilePicture": "https://res.cloudinary.com/ds3egsoa3/image/upload/v1773641703/dr_one_-_S.Akhila_Cs-018_fi2bvl.jpg",
+    "year": "NIAT Senior",
+    "expertise": [
+      "Tech",
+      "Internship",
+      "Leadership",
+      "Public Speaking",
+      "Club Management"
+    ],
+    "traits": [
+      "Funny",
+      "Open-minded",
+      "Passionate",
+      "Goal-oriented"
+    ],
+    "quote": "Simple conversations make the best connections.",
+    "linkedIn": "https://www.linkedin.com/in/akhila-sirumalle",
+    "about": "Just someone who likes to learn, explore new things, and have good conversations. If you want to talk, ask questions, or need help, feel free to connect.",
+    "accent": "var(--accent-3)",
+    "bgGradient": "#f18701, #f35b04"
+  },
+  {
+    "name": "Aithagoni Akshitha",
+    "profilePicture": "https://res.cloudinary.com/ds3egsoa3/image/upload/v1773641614/niat_pic_akshu_-_Akshitha_Aithagoni_a2sz0j.jpg",
+    "year": "NIAT Senior",
+    "expertise": [
+      "Tech",
+      "Internship",
+      "Campus Life",
+      "Leadership"
+    ],
+    "traits": [
+      "Open-minded",
+      "Empathetic",
+      "Passionate",
+      "Goal-oriented"
+    ],
+    "quote": "Curious mind, learning every day, and always open to meaningful conversations.",
+    "linkedIn": "https://www.linkedin.com/in/akshithaaithagoni223/",
+    "about": "I’m currently pursuing a BSc degree through the BITS online program while developing technical and industry skills through NIAT. I’m interested in programming, technology, and building practical solutions through projects. I enjoy learning new tools, participating in workshops and hackathons, and improving my communication and problem-solving skills. I’m always open to connecting with people who are passionate about technology and continuous learning.",
+    "accent": "var(--primary)",
+    "bgGradient": "#b91c1c, #991b1b"
+  },
+  {
+    "name": "Aitha Rohan Kumar",
+    "profilePicture": "https://res.cloudinary.com/ds3egsoa3/image/upload/v1773641368/IMG_20250713_115658_-_rohan_raj_fpfatl.jpg",
+    "year": "NIAT Senior",
+    "expertise": [
+      "Tech",
+      "Internship"
+    ],
+    "traits": [
+      "Funny",
+      "Smart (Delulu)",
+      "Open-minded",
+      "Empathetic",
+      "Passionate",
+      "Goal-oriented",
+      "Sarcastic (but kind)"
+    ],
+    "quote": "No one is perfect in this world....let's get perfect.",
+    "linkedIn": "https://www.linkedin.com/in/aitha-rohan-295a69314/",
+    "about": "I’m Rohan kumar, a student intern from Nxt wave Institute of Advanced Technologies who enjoys exploring technology and building creative projects. I’m always curious to learn new things, solve problems, and collaborate with others. I believe in growing through challenges — and most importantly, enjoying life along the way. 😊",
+    "accent": "var(--accent-2)",
+    "bgGradient": "#f7b801, #f18701"
+  }
+]

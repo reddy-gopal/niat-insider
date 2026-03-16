@@ -8,11 +8,9 @@ export const faqsData = [
   "How do I crack the NAT? Any tips?"
 ];
 
-export const seniorsData = [
-  { name: "Karthik", year: "3rd Year", traits: ["🎉 Funny", "🧠 Smart (Delulu)"], quote: "Please don't connect with me if you aren't a foodie", accent: "var(--accent-2)", bgGradient: "#f7b801, #f18701" },
-  { name: "Ramya", year: "2nd Year", traits: ["💭 Open-minded", "💛 Empathetic"], quote: "You can talk about anything with me!", accent: "var(--secondary)", bgGradient: "#9496f0, #7678ed" },
-  { name: "Abdul", year: "3rd Year", traits: ["🏕️ Adventurous", "😌 Easy-going"], quote: "Life is simple bro….let's connect, we'll talk.", accent: "var(--accent-3)", bgGradient: "#f18701, #f35b04" }
-];
+/** Senior profile data — keep in seniorsData.json; update via: npm run import-seniors [path/to.csv] */
+import seniorsDataJson from './seniorsData.json';
+export const seniorsData = seniorsDataJson;
 
 export const storiesData = [
   { name: "Abhinav", year: "2nd Year", color: "#7678ed" },
