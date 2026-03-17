@@ -280,22 +280,19 @@ function SpotlightModal({ senior, onClose }) {
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.15 }}
                       whileTap={{ scale: 0.95 }}
+                      title="View LinkedIn profile"
                       style={{
                         display: 'inline-flex',
                         alignItems: 'center',
-                        gap: '6px',
-                        fontSize: '13px',
-                        fontWeight: 600,
+                        justifyContent: 'center',
+                        fontSize: '18px',
                         color: 'rgb(52, 101, 216)',
                         textDecoration: 'none',
-                        padding: '4px 12px',
-                        borderRadius: '50px',
-                        background: 'rgba(52,101,216,0.08)',
-                        border: '1px solid rgba(52,101,216,0.15)'
+                        padding: '6px',
+                        borderRadius: '50%'
                       }}
                     >
-                      <FontAwesomeIcon icon={faLinkedin} style={{ fontSize: '14px' }} />
-                      Connect
+                      <FontAwesomeIcon icon={faLinkedin} />
                     </motion.a>
                   )}
                 </div>
@@ -414,36 +411,38 @@ function SpotlightModal({ senior, onClose }) {
               </div>
             )}
 
-            {/* ── CTA ── */}
-            <motion.a
-              href={BOOK_SLOT_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{
-                scale: 1.03,
-                boxShadow: `0 16px 40px -8px ${senior.accent}55`
-              }}
-              whileTap={{ scale: 0.97 }}
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '10px',
-                width: '100%',
-                padding: '16px',
-                borderRadius: '16px',
-                background: `linear-gradient(135deg, ${senior.bgGradient})`,
-                color: 'white',
-                fontWeight: 700,
-                fontSize: '16px',
-                textDecoration: 'none',
-                letterSpacing: '-0.01em',
-                boxShadow: `0 8px 24px -8px ${senior.accent}44`
-              }}
-            >
-              <Zap size={18} />
-              Book a Session
-            </motion.a>
+            {/* ── CTA: Connect on LinkedIn ── */}
+            {senior.linkedIn && (
+              <motion.a
+                href={senior.linkedIn}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{
+                  scale: 1.03,
+                  boxShadow: `0 16px 40px -8px ${senior.accent}55`
+                }}
+                whileTap={{ scale: 0.97 }}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '10px',
+                  width: '100%',
+                  padding: '16px',
+                  borderRadius: '16px',
+                  background: 'rgb(52, 101, 216)',
+                  color: 'white',
+                  fontWeight: 700,
+                  fontSize: '16px',
+                  textDecoration: 'none',
+                  letterSpacing: '-0.01em',
+                  boxShadow: '0 8px 24px -8px rgba(52, 101, 216, 0.5)'
+                }}
+              >
+                <FontAwesomeIcon icon={faLinkedin} style={{ fontSize: '18px' }} />
+                Let's connect on LinkedIn
+              </motion.a>
+            )}
 
           </div>
         </motion.div>
@@ -618,6 +617,7 @@ export function MeetSeniors() {
       </AnimatePresence>
 
       <section
+        id="meet"
         className="section-padding"
         style={{ background: 'var(--bg-1)', position: 'relative', overflow: 'hidden' }}
       >
@@ -743,7 +743,7 @@ export function MeetSeniors() {
                 transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
               }}
             >
-              Book Your Slot
+              Book a Session
             </motion.a>
           </motion.div>
         </motion.div>
