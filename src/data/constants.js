@@ -1,5 +1,5 @@
 /** Opens in new tab when user clicks "Book Your Slot" / "Book Slot" */
-export const BOOK_SLOT_URL = 'https://docs.google.com/forms/d/14VcKHM6JR_8I3u51IxcbPRRH9siwtLyOH3A21BpWTnE/viewform?edit_requested=true';
+export const BOOK_SLOT_URL = 'https://forms.ccbp.in/register/ama-session-registration';
 
 export const faqsData = [
   "What's the difference between a regular college and one that offers the NIAT program?",
