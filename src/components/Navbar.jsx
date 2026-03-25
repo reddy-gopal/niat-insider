@@ -26,7 +26,7 @@ export function Navbar({ scrolled }) {
           letter-spacing: -0.02em;
         }
         .nav-brand-insider {
-          font-weight: 500;
+          font-weight: 700;
           color: var(--text-1);
           font-size: 18px;
         }
