@@ -77,7 +77,7 @@ export function Navbar({ scrolled }) {
         }}
       >
         <a href="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
-          <img src="https://niat-ama.vercel.app/niat.png" alt="NIAT" style={{ height: '40px', width: 'auto', display: 'block' }} />
+          <img src="https://niat-ama.vercel.app/niat.svg" alt="NIAT" style={{ height: '40px', width: 'auto', display: 'block' }} />
           <span className="nav-brand-wrap">
             <span className="nav-brand-niat">NIAT</span>
             <span className="nav-brand-insider">Insider</span>
